@@ -1,0 +1,6 @@
+%h1 Your tweets
+%p= link_to "Create a new one", new_tweet_path
+- for tweet in @tweets
+  %p
+    = image_tag tweet.photo.url(:thumb)
+    =h tweet.tweet

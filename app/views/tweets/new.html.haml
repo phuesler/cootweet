@@ -1,0 +1,13 @@
+%h1 Add a new Cootweet
+- form_for(@tweet,:html => { :multipart => true }) do |f|
+  = f.error_messages
+  %table
+    %tr
+      %td= f.label :description
+      %td= f.text_area :tweet, :rows => 4, :cols => 40
+    %tr
+      %td= f.label :photo
+      %td= f.file_field :photo    
+    %tr
+      %td
+      %td= f.submit "Tweet"

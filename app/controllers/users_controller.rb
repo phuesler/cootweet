@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     @user = current_user
     if @user.update_attributes(params[:user])
       flash[:notice] = "Successlfuly updated user."
-      redirect_to users_url
+      redirect_to root_url
     else
       render :action => 'edit'
     end

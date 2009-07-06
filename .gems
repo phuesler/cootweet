@@ -2,3 +2,4 @@ authlogic
 haml --version '>= 2.2.0'
 haml-edge
 chriseppstein-compass --source gems.github.com
+mislav-will_paginate --source gems.github.com

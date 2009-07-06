@@ -2,10 +2,8 @@ class TweetsController < ApplicationController
   before_filter :require_user
   
   def index
-    @tweets = current_user.tweets
-  end
-  def new
     @tweet = Tweet.new
+    @tweets = current_user.tweets.paginate(:page => params[:page], :per_page => 10)
   end
   
   def create
@@ -15,7 +13,7 @@ class TweetsController < ApplicationController
       redirect_to tweets_path
     else
       flash[:error] = "There was an error"
-      render :action => :new
+      render :action => :index
     end
   end
 end

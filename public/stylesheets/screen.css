@@ -428,7 +428,3 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 75px; }
-
-/* line 60, ../../app/stylesheets/screen.sass */
-.spacer {
-  margin-bottom: 20px; }

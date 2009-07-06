@@ -1,0 +1,13 @@
+!!! XML
+!!! Strict
+%html{'xmlns' => 'http://www.w3.org/1999/xhtml', 'xml:lang' => 'en', 'lang' => 'en'}
+  %head
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
+    %title= "#{page_title + ' - ' unless page_title.blank?}#{t(:app_name)}"
+    = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'print.css', :media => 'print'
+    /[if IE]
+      = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+  %body{:class => body_class}
+    = render :partial => 'layouts/flashes'
+    = yield

@@ -12,5 +12,5 @@ config/database.yml
 autotest_result.html
 coverage
 public/javascripts/*_[0-9]*.js
-public/stylesheets/*.css
+.sass-cache
 public/attachments

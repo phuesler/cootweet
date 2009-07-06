@@ -15,35 +15,44 @@
   +container
 
 =background_logo
-  :background-image url('/images/compass.jpg')
-  :background-repeat no-repeat
-  :background-position center center
-  :min-height 75px
+  background:
+    image: url('/images/compass.jpg')
+    repeat: no-repeat
+    position: center center
+  min-height: 75px
 
 +sticky-footer(75px, "#container", "#layout_footer", "#footer")
 
+body
+  height: 100%
+
 #container
   +container
+  margin-bottom: -75px
+  height: 100%
 
 #header    
   +background_logo
-  :margin-bottom 20px
   h1
-    :color white
-    :font-size 50pt
+    color: white
+    font-size: 50pt
 
   
 #sidebar
   !sidebar_columns = floor(!blueprint_grid_columns / 5)
   +column(!sidebar_columns)
+  padding-top: 20px
+  height: 100%
   ul
-    +no-bullets    
+    +no-bullets
+  a
+    +hover-link
+    +link-colors(#272727,#454545)
 
 #content
-  // Two thirds of the grid columns, rounding up.
   !content_columns = ceil(4 * !blueprint_grid_columns / 5)
-  // true means it's the last column in the row
   +column(!content_columns, true)
-
+  height: 100%
+  padding-top: 20px
 #footer
   +background_logo

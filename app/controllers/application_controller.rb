@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   
   # Authlogic-specific helper methods
   helper_method :current_user
+  
+  def index
+    @tweets = Tweet.all(:limit => 10)
+  end
 
   private
     def current_user_session

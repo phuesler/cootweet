@@ -1,6 +1,20 @@
-%h1 Your tweets
-%p= link_to "Create a new one", new_tweet_path
-- for tweet in @tweets
-  %p
-    = image_tag tweet.photo.url(:thumb)
-    =h tweet.tweet
+%h1 Your Cootweets
+- form_for(@tweet,:html => { :multipart => true }) do |f|
+  = f.error_messages
+  %table
+    %tr
+      %td= f.label :description
+      %td= f.text_area :tweet, :rows => 4, :cols => 40
+    %tr
+      %td= f.label :photo
+      %td= f.file_field :photo    
+    %tr
+      %td
+      %td= f.submit "Tweet"
+%table
+  - for tweet in @tweets
+    %tr
+      %td= image_tag tweet.photo.url(:thumb)
+      %td= h tweet.tweet
+
+= will_paginate @tweets

@@ -11,16 +11,19 @@
   %body
     #container
       #header
+      #content
+        .narrow
+          = render :partial => 'layouts/flashes'
+          = yield
       #sidebar
         %ul
+          %li= link_to "Home".upcase, root_path
           - if current_user
             %li= link_to "Logout", logout_path
-            %li= link_to "Cootweets", tweets_path
+            %li= link_to "Edit profile", edit_user_path(current_user)
+            %li= link_to "My Cootweets", tweets_path
           - else
             %li= link_to "Login", login_path
             %li= link_to "Sign up",new_user_path
-      #content
-        = render :partial => 'layouts/flashes'
-        = yield
-      #layout_footer
-    #footer
+      .clear
+      #footer

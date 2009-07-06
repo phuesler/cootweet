@@ -13,6 +13,7 @@
 
 .wrap
   +container
+  
 
 =background_logo
   background:
@@ -20,40 +21,46 @@
     repeat: no-repeat
     position: center center
   min-height: 75px
-
-+sticky-footer(75px, "#container", "#layout_footer", "#footer")
-
+  
 body
-  height: 100%
+  background-color: #999
+
+h1
+  color: #5C5C5C
 
 #container
   +container
-  margin-bottom: -75px
-  height: 100%
-  min-height: 600px
+  background-color: white
 
 #header    
-  +background_logo
-  h1
-    color: white
-    font-size: 50pt
+  +background_logo  
+  margin-bottom: 20px
 
-  
 #sidebar
   !sidebar_columns = floor(!blueprint_grid_columns / 5)
-  +column(!sidebar_columns)
-  padding-top: 20px
-  height: 100%
+  +column(!sidebar_columns,true)
   ul
     +no-bullets
   a
     +hover-link
-    +link-colors(#272727,#454545)
+    +link-colors(#272727,#454545)  
 
 #content
   !content_columns = ceil(4 * !blueprint_grid_columns / 5)
   +column(!content_columns, true)
   height: 100%
-  padding-top: 20px
+  padding-bottom: 20px
+
+  .narrow
+    !content_columns = ceil(3 * !blueprint_grid_columns / 5)
+    +column(!content_columns)
+    padding-left: 120px
+    padding-right: 120px
+    
+    .pagination
+      text-align: center
+    
 #footer
   +background_logo
+.clear
+  clear: both

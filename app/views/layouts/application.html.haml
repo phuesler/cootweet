@@ -9,5 +9,15 @@
     /[if IE]
       = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
   %body{:class => body_class}
-    = render :partial => 'layouts/flashes'
-    = yield
+    #container
+      #header
+        %h1 Coopict
+      #sidebar
+        %ul
+          %li= link_to "Sign up",new_user_path
+          %li= link_to "Login", login_path
+      #content
+        = render :partial => 'layouts/flashes'
+        = yield
+      #footer
+        =image_tag "compass.jpg"

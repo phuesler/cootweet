@@ -3,43 +3,47 @@
 // To configure blueprint, edit the partials/base.sass file.
 @import partials/base.sass
 // Import all the default blueprint modules so that we can access their mixins.
-@import blueprint
-@import compass/utilities/lists.sass
+@import compass/reset.sass
+@import partials/base.sass
+@import blueprint.sass
+@import compass/layout.sass
+@import compass/utilities.sass
 
-body
-  +blueprint-typography
-  +blueprint-utilities
++blueprint-typography
 
+.wrap
+  +container
+
+=background_logo
+  :background-image url('/images/compass.jpg')
+  :background-repeat no-repeat
+  :background-position center center
+  :min-height 75px
+
++sticky-footer(75px, "#container", "#layout_footer", "#footer")
 
 #container
   +container
+
 #header    
-  +column(!blueprint_grid_columns)
-  :background-image url('/images/compass.jpg')
-  :background-repeat no-repeat
+  +background_logo
+  :margin-bottom 20px
   h1
     :color white
-    :font-size 30pt
+    :font-size 50pt
 
-#footer
-  +column(!blueprint_grid_columns)
   
 #sidebar
-  :padding-top 20px
-  // One third of the grid columns, rounding down. With 24 cols, this is 8.
   !sidebar_columns = floor(!blueprint_grid_columns / 5)
   +column(!sidebar_columns)
-
   ul
-    +no-bullets
-    a
-      +link-colors(#00c, #0cc, #c0c, #ccc, #cc0)
-    
+    +no-bullets    
 
 #content
-  :padding-top 20px
   // Two thirds of the grid columns, rounding up.
-  // With 24 cols, this is 16.
   !content_columns = ceil(4 * !blueprint_grid_columns / 5)
   // true means it's the last column in the row
   +column(!content_columns, true)
+
+#footer
+  +background_logo

@@ -1,0 +1,12 @@
+--- 
+javascripts: 
+- base: 
+  - jquery
+  - jquery.full
+  - jquery.form
+  - jquery-ui
+  - jquery-ui.full
+  - application
+stylesheets: 
+- base: 
+  - screen

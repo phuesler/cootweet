@@ -1,7 +1,8 @@
-= image_tag "claim.png"
-= image_tag "camera.png"
-= image_tag "geotag.png"
-= image_tag "tweety.png"
+- with_options(:height => 200, :width => 200) do |options|
+  = options.image_tag "claim.png"
+  = options.image_tag "camera.png"
+  = options.image_tag "geotag.png"
+  = options.image_tag "tweety.png"
 %p
   = link_to "Get Started-Join!", signup_path, :class => 'join'
 

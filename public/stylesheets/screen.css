@@ -340,7 +340,7 @@ caption {
 
 /* line 25, ../../app/stylesheets/screen.sass */
 body {
-  background-color: #999; }
+  background-color: #D0EEFF; }
 
 /* line 28, ../../app/stylesheets/screen.sass */
 h1 {
@@ -395,7 +395,7 @@ h1 {
   float: left;
   margin-right: 0;
   width: 638px;
-  height: 100%;
+  min-height: 500px;
   padding-bottom: 20px; }
   /* line 97, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.4/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html #content {

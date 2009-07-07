@@ -364,8 +364,12 @@ h1 {
   background-position: center center;
   min-height: 75px;
   margin-bottom: 20px; }
+  /* line 38, ../../app/stylesheets/screen.sass */
+  #header h1 {
+    color: #C1C1C1;
+    font-size: 5em; }
 
-/* line 39, ../../app/stylesheets/screen.sass */
+/* line 42, ../../app/stylesheets/screen.sass */
 #sidebar {
   display: inline;
   float: left;
@@ -378,7 +382,7 @@ h1 {
   #sidebar ul li {
     list-style-type: none;
     margin-left: 0px; }
-  /* line 44, ../../app/stylesheets/screen.sass */
+  /* line 47, ../../app/stylesheets/screen.sass */
   #sidebar a {
     text-decoration: none;
     color: #272727; }
@@ -389,7 +393,7 @@ h1 {
     #sidebar a:hover {
       color: #454545; }
 
-/* line 48, ../../app/stylesheets/screen.sass */
+/* line 51, ../../app/stylesheets/screen.sass */
 #content {
   display: inline;
   float: left;
@@ -400,7 +404,7 @@ h1 {
   /* line 97, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.4/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html #content {
     overflow-x: hidden; }
-  /* line 54, ../../app/stylesheets/screen.sass */
+  /* line 57, ../../app/stylesheets/screen.sass */
   #content .narrow {
     display: inline;
     float: left;
@@ -411,17 +415,30 @@ h1 {
     /* line 97, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.4/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html #content .narrow {
       overflow-x: hidden; }
-    /* line 60, ../../app/stylesheets/screen.sass */
+    /* line 63, ../../app/stylesheets/screen.sass */
     #content .narrow .pagination {
       text-align: center; }
 
-/* line 63, ../../app/stylesheets/screen.sass */
+/* line 66, ../../app/stylesheets/screen.sass */
 #footer {
   background-image: url('/images/compass.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 75px; }
 
-/* line 65, ../../app/stylesheets/screen.sass */
+/* line 68, ../../app/stylesheets/screen.sass */
 .clear {
   clear: both; }
+
+/* line 71, ../../app/stylesheets/screen.sass */
+p a.join {
+  text-decoration: none;
+  background-color: #97CD39;
+  border: 1px solid #000000;
+  color: #FFFFFF;
+  display: block;
+  font-size: 2.5em;
+  margin: 1em auto 0.5em;
+  padding: 4px;
+  text-align: center;
+  width: 9.5em; }

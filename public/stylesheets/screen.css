@@ -442,3 +442,21 @@ p a.join {
   padding: 4px;
   text-align: center;
   width: 9.5em; }
+
+
+/* line 85, ../../app/stylesheets/screen.sass */
+#flash {
+  color: #444;
+  padding: 2em 2em 2em 2em; }
+  /* line 89, ../../app/stylesheets/screen.sass */
+  #flash .notice {
+    background: #efd;
+    border: 1px solid #cda; }
+  /* line 93, ../../app/stylesheets/screen.sass */
+  #flash .info {
+    background: #def;
+    border: 1px solid #acd; }
+  /* line 97, ../../app/stylesheets/screen.sass */
+  #flash .error {
+    background: #fec;
+    border: 1px solid #dca; }

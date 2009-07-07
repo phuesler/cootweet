@@ -1,3 +1,4 @@
-#flash
-  - flash.each do |key, value|
-    %div{:id => "flash_#{key}"}= value
+- if flash.any?
+  #flash
+    - flash.each do |key, value|
+      %div{:id => "flash", :class => key}= value
